@@ -97,7 +97,7 @@ docker run -p 8081:8081 --network=mongo-network --name=mongo-express -e ME_CONFI
 
 ## Step 7. Now clone the Sample-App on to your system and change the directory to app.
 
-- You can clone the Sample-App from here: [Github Link - Raj Randive](https://github.com/Raj-Randive/3-Tier-Architecture-Docker).
+- You can clone the Sample-App from here: [Github Link - Pushkar Kadam](https://github.com/push-istov/3_tier_docker_app).
 
 ![Step-Image1](./assets/images/7.png)
 
