@@ -20,21 +20,21 @@ Follow my GitHub Account: [Pushkar Kadam](https://github.com/push-istov)
 
 ---
 
-My project implements a 3-tier architecture using Docker containers. The architecture consists of:
+Utilizing Docker containers, my project implements a 3-tier architecture, comprising:
 
-- Sample-App container: Hosts the application logic.
-- mongo-express container: Provides a user-friendly interface for MongoDB.
-- MongoDB container: Houses the database.
+  -  Sample-App Container: This container hosts the application logic.
+  -  mongo-express Container: It provides a user-friendly interface for MongoDB.
+  -  MongoDB Container: This container houses the database.
 
-This app shows a simple user profile app set up using
+The application showcases a simple user profile system set up with:
 
-1. index.html with pure js and css styles
-2. nodejs backend with express module
-3. mongodb for data storage
+  1.  index.html: Developed using pure JavaScript and CSS styles.
+  2.  Node.js Backend: Utilizing the Express module.
+  3.  MongoDB: Employed for data storage.
 
 <div style="text-align: justify">
 
-This modular setup enables independent scaling, ensures consistent deployment across environments, and simplifies maintenance tasks, laying a solid foundation for scalable and efficient application deployment.
+Enabling independent scaling, ensuring consistent deployment across environments, and simplifying maintenance tasks, this modular setup lays a solid foundation for scalable and efficient application deployment.
 
 </div>
 
@@ -56,18 +56,19 @@ docker network ls
 
 ![Step-Image1](./assets/images/2.png)
 
-## Step 3. Create "mongodb" container using following command
+## Step 3. Create "mongodb" container using the following command
 
 ```js
 // Docker Command
 docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_ROOT_PASSWORD=password --net mongo-network --name=mongodb -d mongo
 ```
 
-- 27017 is by default port for mongodb container (refer mongodb DockerHub repository for more details).
-- -e flag is for environment variables.
-- We are spinning the container inside our mongo-network.
-- Select the image "mongo". If no tag is passed, by default it takes latest tag.
-- Check the spinned container "via docker ps" command.
+-The default port for the MongoDB container is 27017 (for more details, please refer to the MongoDB DockerHub repository).
+
+  - The -e flag is used for specifying environment variables.
+  - We are launching the container within our "mongo-network."
+  - Choose the "mongo" image. If no tag is specified, it defaults to the latest tag.
+  - Verify the running container using the "docker ps" command.
 
 ![Step-Image1](./assets/images/3.png)
 
@@ -78,12 +79,12 @@ docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=admin -e MONGO_INITDB_RO
 docker run -p 8081:8081 --network=mongo-network --name=mongo-express -e ME_CONFIG_MONGODB_ADMINUSERNAME=admin -e ME_CONFIG_MONGODB_ADMINPASSWORD=password -e ME_CONFIG_MONGODB_SERVER=mongodb  -d mongo-express
 ```
 
-- 8081 is by default port for mongo-express container (refer mongo-express DockerHub repository for more details).
-- -e flag is for environment variables.
-- We are spinning the container inside our mongo-network.
-- Refer DockerHub mongo-express Repository to get all the necessary environment variables.
-- Select the image "mongo-express". If no tag is passed, by default it takes latest tag.
-- Check the spinned container via "docker ps" command.
+  -  The default port for the mongo-express container is 8081 (refer to the mongo-express DockerHub repository for more details).
+  -  The -e flag is used for specifying environment variables.
+  -  We are deploying the container within our "mongo-network."
+  -  Refer to the DockerHub mongo-express repository to obtain all necessary environment variables.
+  -  Choose the "mongo-express" image. If no tag is specified, it defaults to the latest tag.
+  -  Verify the running container using the "docker ps" command.
 
 ![Step-Image1](./assets/images/4.png)
 
@@ -164,7 +165,7 @@ docker images
 docker run -d -p 3000:3000 --network=mongo-network <sample-app-name>
 ```
 
-- "-d" is to spin the container in detached mode.
+- "-d" is used to spin the container in detached mode.
 - Check the running container using "docker ps" command.
 - We can see now we have 3 containers running.
   - First: Our Sample-App running.
@@ -237,7 +238,7 @@ Flexibility: By decoupling the application logic, database, and user interface i
 
 <div style="text-align: justify">
 
-By adopting a 3-tier architecture with Docker, we've created a scalable and resilient foundation for deploying modern applications. Whether you're building a small-scale prototype or a large-scale production system, leveraging containerization can streamline your development and deployment workflows, empowering you to focus on delivering value to your users.
+By embracing Docker within a 3-tier architecture, we've established a resilient and scalable foundation for deploying modern applications. Regardless of whether you're crafting a small-scale prototype or orchestrating a large-scale production system, the adoption of containerization streamlines both your development and deployment workflows. This empowers you to channel your efforts towards delivering tangible value to your users.
 
 </div>
 
