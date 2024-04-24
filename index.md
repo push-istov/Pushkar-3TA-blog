@@ -5,7 +5,7 @@ layout: default
 <!-- **bold**, _italic_, ~~strikethrough~~ or `keyword`. -->
 <!-- [Link to another page](./another-page.html). -->
 
-# **3-Tier Architecture Application Developing using Docker**
+
 
 Follow my GitHub Account: [Pushkar Kadam](https://github.com/push-istov)
 
@@ -245,6 +245,6 @@ By adopting a 3-tier architecture with Docker, we've created a scalable and resi
 
 ---
 
-### Name: Raj Randive (21BCP378)
+### Name: Pushkar Kadam (21BCP372)
 
 _Written on April 23, 2024_
